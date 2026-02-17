@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+/* Contenedor central */
+.container {
+  max-width: 1200px; /* limita ancho en desktop */
+  margin: 0 auto;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* más aire entre miniaturas */
+}
+
+/* Miniaturas cuadradas */
+.thumb {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #ddd;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumb img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive: móvil/tablet */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* más aire entre miniaturas en móvil */
+  }
+}
+
+/* Lightbox / Modal centrado */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.95);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.lightbox.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Imagen con fade-in */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.lightbox-img.loaded {
+  opacity: 1;
+}
+
+/* Cerrar */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Flechas */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  user-select: none;
+  transform: translateY(-50%);
+  transition: color 0.2s ease;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover, .close:hover {
+  color: #ddd;
+}
