@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Paisajes Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Mi Galería de Paisajes</h1>
+<p>Demo de 6 fotos, galería responsiva, miniaturas cuadradas, modal con navegación y swipe táctil.</p>
+
+<div class="gallery">
+  <div class="thumb">
+    <img src="thumbs/foto1-900.webp" data-full="full/foto1-1800.webp" alt="Paisaje 1" loading="lazy">
+  </div>
+  <div class="thumb">
+    <img src="thumbs/foto2-900.webp" data-full="full/foto2-1800.webp" alt="Paisaje 2" loading="lazy">
+  </div>
+  <div class="thumb">
+    <img src="thumbs/foto3-900.webp" data-full="full/foto3-1800.webp" alt="Paisaje 3" loading="lazy">
+  </div>
+  <div class="thumb">
+    <img src="thumbs/foto4-900.webp" data-full="full/foto4-1800.webp" alt="Paisaje 4" loading="lazy">
+  </div>
+  <div class="thumb">
+    <img src="thumbs/foto5-900.webp" data-full="full/foto5-1800.webp" alt="Paisaje 5" loading="lazy">
+  </div>
+  <div class="thumb">
+    <img src="thumbs/foto6-900.webp" data-full="full/foto6-1800.webp" alt="Paisaje 6" loading="lazy">
+  </div>
+</div>
+
+<!-- Modal / Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-img" alt="Imagen ampliada">
+  <span class="prev">&#10094;</span>
+  <span class="next">&#10095;</span>
+</div>
+
+<!-- JS se puede incluir aquí, al final del body -->
+<script src="gallery.js"></script>
+
+</body>
+</html>
