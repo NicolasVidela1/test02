@@ -99,7 +99,7 @@ p {
   top: 20px;
   right: 35px;
   color: white;
-  font-size: 40px;
+  font-size: 30px; /* 40px; */
   cursor: pointer;
   user-select: none;
 }
@@ -113,7 +113,7 @@ p {
   padding: 10px;
   color: white;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 20px; /* 50px; */
   user-select: none;
   transform: translateY(-50%);
   transition: color 0.2s ease;
